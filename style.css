@@ -33,6 +33,21 @@
     font-size: 4rem;
 }
 
+a { color: inherit }
+
+.container .side p {
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-size: x-small;
+}
+
+.container .side .credit {
+    position: absolute;
+    top: 97%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .container .side .logo {
     position: absolute;
     top: 30%;
