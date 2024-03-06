@@ -35,7 +35,7 @@
 
 .container .side .logo {
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     white-space: nowrap;
@@ -49,22 +49,6 @@
     margin-left: -25px;
 }
 
- /* .container {
+.container .main h3 {
     position: relative;
 }
-
-.background-image {
-    width: 35%;
-    position: fixed;
-    z-index: 0;
-}
-
-.container h1 {
-    z-index: 1;
-    color: white;
-    text-shadow: 1px 1px 1px black;
-    position: absolute;
-    left: 10%;
-    top: 50%;
-    transform: translate(0%, -50%);
-} */
