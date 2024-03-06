@@ -49,6 +49,13 @@
     margin-left: -25px;
 }
 
-.container .main h3 {
+.container .main {
     position: relative;
+    padding-left: 50px;
+    padding-top: 150px;
+}
+
+.container .main h3 {
+    max-width: 75%;
+    padding-bottom: 20px;
 }
