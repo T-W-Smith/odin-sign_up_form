@@ -10,20 +10,25 @@
     padding: 0;
 }
 
+html, body {
+    height: 100%;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr 3fr;
+    height: 100%;
 }
 
 .container .side {
     position: relative;
-    min-width: 400px;
+    width: 400px;
     height: 100%;
 }
 
 .container .side img {
     width: 100%;
-    height: 100vh;
+    min-height: 100%
 }
 
 .container .side h1 {
@@ -67,10 +72,37 @@ a { color: inherit }
 .container .main {
     position: relative;
     padding-left: 50px;
-    padding-top: 150px;
+    padding-top: 100px;
 }
 
 .container .main h3 {
     max-width: 75%;
+    padding-bottom: 30px;
+}
+
+.container .main h4 {
+    padding-top: 40px;
     padding-bottom: 20px;
+}
+
+ .container .main form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 20px;
+    grid-column-gap: 50px;
+    width: 100px;
+}
+
+.container .main form .field {
+    display: flex;
+    flex-direction: column;
+}
+
+.container .main form button {
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.container .main p {
+    padding-top: 15px;
 }
