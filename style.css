@@ -61,12 +61,13 @@ a { color: inherit }
     white-space: nowrap;
     display: flex;
     align-items: center;
+    background-color: rgba(25, 25, 25, 0.6);
+    width: 100%;
 }
 
 .container .side .logo img {
     width: 8rem;
     height: auto;
-    margin-left: -25px;
 }
 
 .container .main {
@@ -82,7 +83,8 @@ a { color: inherit }
 
 .container .main h4 {
     padding-top: 40px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
+    font-size: large;
 }
 
  .container .main form {
@@ -90,19 +92,45 @@ a { color: inherit }
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 20px;
     grid-column-gap: 50px;
-    width: 100px;
+    width: 200px;
 }
 
 .container .main form .field {
     display: flex;
     flex-direction: column;
+    width: 250px;
+}
+
+.container .main form .field input {
+    border: 2px solid #E5E7EB;
+    border-radius: 5px;
+    height: 25px;
+    font-size: large;
+}
+
+.container .main form .field input:focus {
+    outline: none;
+    border: 2px solid blue;
+    box-shadow: 3px 3px 4px black;
 }
 
 .container .main form button {
-    margin-top: 30px;
-    padding: 10px;
+    margin-top: 50px;
+    padding: 12px;
+    background-color: #87b52a;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: large;
+    box-shadow: 1px 1px 3px black;
+    cursor: pointer;
 }
 
 .container .main p {
     padding-top: 15px;
+    margin-bottom: 100px;
+}
+
+.container .main p a{
+    color: #87b52a
 }
