@@ -114,6 +114,12 @@ a { color: inherit }
     box-shadow: 3px 3px 4px black;
 }
 
+.container .main form .field input:invalid {
+    outline: none;
+    border: 2px solid red;
+    box-shadow: 2px 2px 4px black;
+}
+
 .container .main form button {
     margin-top: 50px;
     padding: 12px;
