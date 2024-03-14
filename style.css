@@ -137,6 +137,65 @@ a { color: inherit }
     margin-bottom: 100px;
 }
 
-.container .main p a{
+.container .main p a {
     color: #87b52a
 }
+
+.container .main form #pass {
+    position: relative;
+    display: inline-block;
+}
+
+.container .main form #pass #message {
+    visibility: hidden;
+    width: fit-content;
+    background-color: lightgray;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -150px;
+  }
+
+  .container .main form #pass #message::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: lightgray transparent transparent transparent;
+  }
+  
+  #message p {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Add a green text color and a checkmark when the requirements are right */
+  .valid {
+    color: green;
+  }
+  
+  .valid:before {
+    position: relative;
+    left: -10px;
+    content: "\2713";
+  }
+  
+  /* Add a red text color and an "x" icon when the requirements are wrong */
+  .invalid {
+    color: red;
+  }
+  
+  .invalid:before {
+    position: relative;
+    left: -10px;
+    content: "\0078";
+  }
