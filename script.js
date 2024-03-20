@@ -3,6 +3,7 @@ var letter = document.getElementById("letter");
 var capital = document.getElementById("capital");
 var number = document.getElementById("number");
 var length = document.getElementById("length");
+var confirmPassword = document.getElementById("confirm_password");
 
 // When the user clicks on the password field, show the message box
 myInput.onfocus = function() {
@@ -53,5 +54,22 @@ myInput.onkeyup = function() {
   } else {
     length.classList.remove("valid");
     length.classList.add("invalid");
+  }
+}
+
+confirmPassword.onkeyup = function() {
+  if(confirmPassword.value === myInput.value) {
+    document.getElementById("password_message").style.visibility = "hidden";
+    confirmPassword.style.outline = 'none';
+    confirmPassword.style.border = '2px solid blue';
+    confirmPassword.style.boxShadow = '3px 3px 4px black';
+    confirmPassword.setCustomValidity("");
+  }
+  else {
+    document.getElementById("password_message").style.visibility = "visible";
+    confirmPassword.style.outline = 'none';
+    confirmPassword.style.border = '2px solid red';
+    confirmPassword.style.boxShadow = '3px 3px 4px black';
+    confirmPassword.setCustomValidity("Passwords do not match");
   }
 }
