@@ -132,9 +132,9 @@ a { color: inherit }
     cursor: pointer;
 }
 
-.container .main p {
+.container .main #member {
     padding-top: 15px;
-    margin-bottom: 100px;
+    padding-bottom: 75px;
 }
 
 .container .main p a {
@@ -143,7 +143,6 @@ a { color: inherit }
 
 .container .main form #pass {
     position: relative;
-    display: inline-block;
 }
 
 .container .main form #pass #message {
@@ -156,9 +155,9 @@ a { color: inherit }
     padding: 8px;
     position: absolute;
     z-index: 1;
-    bottom: 125%;
+    bottom: 100%;
     left: 50%;
-    margin-left: -150px;
+    margin-left: -125px;
   }
 
   .container .main form #pass #message::after {
@@ -203,4 +202,5 @@ a { color: inherit }
   .container .main form #confirm #password_message {
     visibility: hidden;
     color: red;
+    padding-top: 5px;
   }

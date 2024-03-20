@@ -58,7 +58,14 @@ myInput.onkeyup = function() {
 }
 
 confirmPassword.onkeyup = function() {
-  if(confirmPassword.value === myInput.value) {
+  if(confirmPassword.value.length === 0) {
+    document.getElementById("password_message").style.visibility = "visible";
+    confirmPassword.style.outline = 'none';
+    confirmPassword.style.border = '2px solid red';
+    confirmPassword.style.boxShadow = '3px 3px 4px black';
+    confirmPassword.setCustomValidity("Please match password");
+  }
+  else if(confirmPassword.value === myInput.value) {
     document.getElementById("password_message").style.visibility = "hidden";
     confirmPassword.style.outline = 'none';
     confirmPassword.style.border = '2px solid blue';
