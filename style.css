@@ -108,17 +108,17 @@ a { color: inherit }
     font-size: large;
 }
 
-.container .main form .field input:focus {
+/* .container .main form .field input:focus {
     outline: none;
     border: 2px solid blue;
     box-shadow: 3px 3px 4px black;
-}
+} */
 
-.container .main form .field input:invalid {
+/* .container .main form .field input:invalid {
     outline: none;
     border: 2px solid red;
     box-shadow: 3px 3px 4px black;
-}
+} */
 
 .container .main form button {
     margin-top: 50px;
