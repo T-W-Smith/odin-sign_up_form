@@ -1,3 +1,4 @@
+// Elements
 var myInput = document.getElementById("user_password");
 var letter = document.getElementById("letter");
 var capital = document.getElementById("capital");
@@ -19,6 +20,7 @@ myInput.onblur = function() {
 }
 
 // When the user starts to type something inside the password field
+// perform password validation checks
 myInput.onkeyup = function() {
   var checkVali = 0;
   // Validate lowercase letters
@@ -68,6 +70,7 @@ myInput.onkeyup = function() {
     checkVali--;
   }
 
+  // If all 4 requriments are meet, change input box styling and vice versa
   if(checkVali >= 4) {
     myInput.style.outline = 'none';
     myInput.style.border = '2px solid blue';
@@ -80,6 +83,8 @@ myInput.onkeyup = function() {
   }
 }
 
+// Checks if both the password and confirm password match each other
+// and sets styling based on the result
 confirmPassword.onkeyup = function() {
   if(confirmPassword.value.length === 0) {
     document.getElementById("password_message").style.visibility = "visible";
@@ -104,6 +109,7 @@ confirmPassword.onkeyup = function() {
   }
 }
 
+// First name input box requirement styling
 first.onkeyup = function() {
   if(first.value.length === 0) {
     first.style.outline = 'none';
@@ -119,6 +125,7 @@ first.onkeyup = function() {
   }
 }
 
+// Last name input box requirement styling
 last.onkeyup = function() {
   if(last.value.length === 0) {
     last.style.outline = 'none';
@@ -134,6 +141,7 @@ last.onkeyup = function() {
   }
 }
 
+// Email input box requirement styling
 email.onkeyup = function() {
   if(email.value.length === 0) {
     email.style.outline = 'none';
@@ -141,6 +149,7 @@ email.onkeyup = function() {
     email.style.boxShadow = '3px 3px 4px black';
     email.setCustomValidity("Please enter a valid email address");
   }
+  // Email validation check
   else if(/^\S+@\S+\.\S+$/.test(email.value) == false) {
     email.style.outline = 'none';
     email.style.border = '2px solid red';

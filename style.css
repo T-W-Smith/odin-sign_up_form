@@ -20,6 +20,7 @@ html, body {
     height: 100%;
 }
 
+/* Side of page styling */
 .container .side {
     position: relative;
     width: 400px;
@@ -70,6 +71,7 @@ a { color: inherit }
     height: auto;
 }
 
+/* Main form area styling */
 .container .main {
     position: relative;
     padding-left: 50px;
@@ -108,6 +110,7 @@ a { color: inherit }
     font-size: large;
 }
 
+/* Old input styling */
 /* .container .main form .field input:focus {
     outline: none;
     border: 2px solid blue;
@@ -141,6 +144,7 @@ a { color: inherit }
     color: #87b52a
 }
 
+/* Password critera pop-up styling */
 .container .main form #pass {
     position: relative;
 }
@@ -199,8 +203,22 @@ a { color: inherit }
     content: "\0078";
   }
 
+  /* Confirm password styling */
   .container .main form #confirm #password_message {
     visibility: hidden;
     color: red;
     padding-top: 5px;
   }
+
+/* Footer styling */
+.footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .container img {
+    width: 25px;
+    height: auto;
+    margin: 5px;
+}
