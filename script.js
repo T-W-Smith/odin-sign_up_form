@@ -72,14 +72,10 @@ myInput.onkeyup = function() {
 
   // If all 4 requriments are meet, change input box styling and vice versa
   if(checkVali >= 4) {
-    myInput.style.outline = 'none';
-    myInput.style.border = '2px solid blue';
-    myInput.style.boxShadow = '3px 3px 4px black';
+    validStyle(myInput);
   }
   else {
-    myInput.style.outline = 'none';
-    myInput.style.border = '2px solid red';
-    myInput.style.boxShadow = '3px 3px 4px black';
+    invalidStyle(myInput);
   }
 }
 
@@ -88,23 +84,16 @@ myInput.onkeyup = function() {
 confirmPassword.onkeyup = function() {
   if(confirmPassword.value.length === 0) {
     document.getElementById("password_message").style.visibility = "visible";
-    confirmPassword.style.outline = 'none';
-    confirmPassword.style.border = '2px solid red';
-    confirmPassword.style.boxShadow = '3px 3px 4px black';
+    invalidStyle(confirmPassword);
     confirmPassword.setCustomValidity("Please match password");
   }
   else if(confirmPassword.value === myInput.value) {
     document.getElementById("password_message").style.visibility = "hidden";
-    confirmPassword.style.outline = 'none';
-    confirmPassword.style.border = '2px solid blue';
-    confirmPassword.style.boxShadow = '3px 3px 4px black';
-    confirmPassword.setCustomValidity("");
+    validStyle(confirmPassword);
   }
   else {
     document.getElementById("password_message").style.visibility = "visible";
-    confirmPassword.style.outline = 'none';
-    confirmPassword.style.border = '2px solid red';
-    confirmPassword.style.boxShadow = '3px 3px 4px black';
+    invalidStyle(confirmPassword);
     confirmPassword.setCustomValidity("Passwords do not match");
   }
 }
@@ -112,54 +101,53 @@ confirmPassword.onkeyup = function() {
 // First name input box requirement styling
 first.onkeyup = function() {
   if(first.value.length === 0) {
-    first.style.outline = 'none';
-    first.style.border = '2px solid red';
-    first.style.boxShadow = '3px 3px 4px black';
+    invalidStyle(first);
     first.setCustomValidity("Please enter your first name");
   }
   else {
-    first.style.outline = 'none';
-    first.style.border = '2px solid blue';
-    first.style.boxShadow = '3px 3px 4px black';
-    first.setCustomValidity("");
+    validStyle(first);
   }
 }
 
 // Last name input box requirement styling
 last.onkeyup = function() {
   if(last.value.length === 0) {
-    last.style.outline = 'none';
-    last.style.border = '2px solid red';
-    last.style.boxShadow = '3px 3px 4px black';
+    invalidStyle(last);
     last.setCustomValidity("Please enter your last name");
   }
   else {
-    last.style.outline = 'none';
-    last.style.border = '2px solid blue';
-    last.style.boxShadow = '3px 3px 4px black';
-    last.setCustomValidity("");
+    validStyle(last);
   }
 }
 
 // Email input box requirement styling
 email.onkeyup = function() {
   if(email.value.length === 0) {
-    email.style.outline = 'none';
-    email.style.border = '2px solid red';
-    email.style.boxShadow = '3px 3px 4px black';
+    invalidStyle(email);
     email.setCustomValidity("Please enter a valid email address");
   }
   // Email validation check
   else if(/^\S+@\S+\.\S+$/.test(email.value) == false) {
-    email.style.outline = 'none';
-    email.style.border = '2px solid red';
-    email.style.boxShadow = '3px 3px 4px black';
+    invalidStyle(email);
     email.setCustomValidity("Please enter a valid email address");
   }
   else {
-    email.style.outline = 'none';
-    email.style.border = '2px solid blue';
-    email.style.boxShadow = '3px 3px 4px black';
-    email.setCustomValidity("");
+    validStyle(email);
   }
+}
+
+// Sets styling for invalid inputs
+function invalidStyle(formInput) {
+  console.log("Invalid");
+  formInput.style.outline = 'none';
+  formInput.style.border = '2px solid red';
+  formInput.style.boxShadow = '3px 3px 4px black';
+}
+
+// Sets styling for valid inputs
+function validStyle(formInput) {
+  formInput.style.outline = 'none';
+  formInput.style.border = '2px solid blue';
+  formInput.style.boxShadow = '3px 3px 4px black';
+  formInput.setCustomValidity("");
 }
