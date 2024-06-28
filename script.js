@@ -1,13 +1,13 @@
 // Elements
-var myInput = document.getElementById("user_password");
-var letter = document.getElementById("letter");
-var capital = document.getElementById("capital");
-var number = document.getElementById("number");
-var length = document.getElementById("length");
-var confirmPassword = document.getElementById("confirm_password");
-var first = document.getElementById("first_name");
-var last = document.getElementById("last_name");
-var email = document.getElementById("user_email");
+const myInput = document.getElementById("user_password");
+const letter = document.getElementById("letter");
+const capital = document.getElementById("capital");
+const number = document.getElementById("number");
+const length = document.getElementById("length");
+const confirmPassword = document.getElementById("confirm_password");
+const first = document.getElementById("first_name");
+const last = document.getElementById("last_name");
+const email = document.getElementById("user_email");
 
 // When the user clicks on the password field, show the message box
 myInput.onfocus = function() {
@@ -22,9 +22,9 @@ myInput.onblur = function() {
 // When the user starts to type something inside the password field
 // perform password validation checks
 myInput.onkeyup = function() {
-  var checkVali = 0;
+  let checkVali = 0;
   // Validate lowercase letters
-  var lowerCaseLetters = /[a-z]/g;
+  let lowerCaseLetters = /[a-z]/g;
   if(myInput.value.match(lowerCaseLetters)) {
     letter.classList.remove("invalid");
     letter.classList.add("valid");
@@ -36,7 +36,7 @@ myInput.onkeyup = function() {
 }
 
   // Validate capital letters
-  var upperCaseLetters = /[A-Z]/g;
+  let upperCaseLetters = /[A-Z]/g;
   if(myInput.value.match(upperCaseLetters)) {
     capital.classList.remove("invalid");
     capital.classList.add("valid");
@@ -48,7 +48,7 @@ myInput.onkeyup = function() {
   }
 
   // Validate numbers
-  var numbers = /[0-9]/g;
+  let numbers = /[0-9]/g;
   if(myInput.value.match(numbers)) {
     number.classList.remove("invalid");
     number.classList.add("valid");
